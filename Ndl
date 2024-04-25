@@ -1,0 +1,13 @@
+import math
+
+def remaining_amount(initial_amount, decay_rate, time):
+    decay_constant = decay_rate / 100
+    remaining = initial_amount * math.exp(-decay_constant * time)
+    return remaining
+
+initial_amount = 100  # grams
+decay_rate = 5  # percent per hour
+time = 4  # hours
+
+amount_remaining = remaining_amount(initial_amount, decay_rate, time)
+print("Amount of substance remaining after 4 hours:", round(amount_remaining, 2), "grams")
